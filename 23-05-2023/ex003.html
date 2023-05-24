@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3</title>
+    <style>
+        body {
+            background-color: #9032b7;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é seu nome? ')
+        document.write(`Olá <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br/>`) 
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br/>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.`)
+    </script>
+</body>
+</html>
+
+<!-- 
+    <strong> Deixa em negrito </strong>
+
+    var n1 = 1450.5
+
+    n1.toFixed(2) -> considera 2 casas depois do ponto flutuante == 1450.50
+    
+    n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) == R$ 1,450.50
+
+    n.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) == US$ 1,450.50
+
+    n.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) == € 1,450.50
+
+ -->

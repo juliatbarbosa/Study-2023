@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: #9032b7;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong> DOM </strong></h1>
+    <p>Document Object Model</p>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        // corpo.style.background = 'pink'
+
+        //Marca
+        var p1 = window.document.getElementsByTagName('p')[0]
+        // window.document.write('Está escrito assim: ' + p1.innerText)
+        // p1.style.color = 'black'
+
+        //ID
+        // var d = window.document.getElementById('msg')
+        // d.style.background = 'blue'
+        // d.innerText = 'Estou aguardando...' -> substitui a mensagem
+
+        //Name
+        //var d = window.document.getElementsByName('msg')[0]
+        //d.style.background = 'blue'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'pink'
+    </script>
+</body>
+</html>
+
+<!-- 
+    Selecionando:
+Por Marca:
+    getElementsByTagName()
+Por ID:
+    getElementsById()
+Por Nome:
+    getElementsByName()
+Por Classe:
+    getElementsByClassName()
+Por Seletor:
+    querySelector()
+    querySelectorAll()
+ -->
