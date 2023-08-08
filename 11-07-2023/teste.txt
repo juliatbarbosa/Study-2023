@@ -1,0 +1,91 @@
+whitelabelconfig.html
+
+<p>Selecione a empresa</p>
+<select name="empresa" id="">
+    <option value="Duzani">Duzani</option>
+    <option value="Lageli">Lageli</option>
+</select>
+
+<br><br>
+
+<p>Descrição</p>
+
+<div class="descricao">
+    <div class="imagemEmpresa">
+        <label class="divImagemForm" id="divImagemFormEmpresa" for="inputImagemEmpresa">
+            <div class="divInput">
+                <img id="imgEmpresa" src="../img/add.png">
+                <input id="inputImagemEmpresa" type="file" style="display: none;" />
+                <input type="hidden" id="inputImagemValorEmpresa">
+            </div>
+        </label>
+    </div>
+    <div class="cores">
+        <p>Cor principal</p>
+        <input type="color" name="colorBotao" id="">
+        <p>Cor fundo</p>
+        <input type="color" name="colorFundo" id="">
+        <p>Cor escrita</p>
+        <input type="color" name="colorEscrita" id="">
+    </div>
+    
+
+</div>
+
+
+<script>
+    if (window.location.href.includes('whitelabelconfig.html')) {
+        window.location.replace('../index.html')
+        sessionStorage.clear()
+    }
+</script>
+
+scss
+
+.descricao {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+
+
+    .cores {
+        display: grid;
+        gap: 10px;
+
+        .p {
+            padding-bottom: 8px !important
+        }
+    }
+
+}
+
+.imagemEmpresa {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #11cc59;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgEmpresa {
+    padding: 3px;
+    width: 100px;
+    height: 100px;
+}
+
+whitelabelconfig.js
+
+function initwhitelabelconfig() {
+    document.getElementById('load').style.display = 'none';
+    document.querySelector("#tituloTela").innerHTML = "Configuração<hr>"
+}
+
+funçoes 
+
+case 'whitelabelconfig':
+            document.querySelector("#tituloTela").innerHTML = "Configuração <hr>"
+            loadJS('whitelabelconfig')
+            break;
